@@ -74,12 +74,12 @@ class rtcm3_Definition:
                 name=line.strip()
                 self.fields.append({'type': "PCHAR" , 'name' : name, 'df_number':df_number ,'value':None
                 })
-
+            elif lines[current_Line].startswith("#"):
+                # It's commented out, ignore
+                pass
             else :
                 print "Unknown Command: " + lines[current_Line]
                 quit()
 
             current_Line +=1
-
-
 
