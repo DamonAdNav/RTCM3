@@ -34,7 +34,7 @@ class ArgParser(argparse.ArgumentParser):
 
 
 parser = ArgParser(
-            description='RTCM  V3 packet decoder',
+            description='RTCM V3 packet decoder',
             fromfile_prefix_chars='@',
             epilog="(c) JCMBsoft 2013")
 
@@ -48,6 +48,7 @@ parser.add_argument("-F", "--Full", nargs='+', help="Packets that should be dump
 parser.add_argument("-V", "--Verbose", nargs='+', help="Packets that should be dumped Verbosely")
 parser.add_argument("-E", "--Explain", action="store_true", help="System Should Explain what is is doing, AKA Verbose")
 parser.add_argument("-W", "--Time", action="store_true", help="Report the time when the packet was received")
+parser.add_argument("-C", "--Count", action="store_true", help="Output packet count summary")
 
 args=parser.parse_args()
 
@@ -214,6 +215,12 @@ else:
    #        print "processed: " + str(result)
        new_data = sys.stdin.read(1)
    #    new_data = input_file.read(255)
+
+   if (args.Count):
+      print "Packet count summary:"
+      for key in sorted(rtcm3.packet_count):
+         print "{} {}".format(key, rtcm3.packet_count[key])
+      print
 
 print "Bye"
 

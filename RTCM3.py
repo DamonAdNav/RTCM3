@@ -124,7 +124,7 @@ class RTCM3:
         self.packet_Length=None
         self.Dump_Levels=array("I")
         self.commands={}
-
+        self.packet_count={}
 
         for i in range (RTCM3_Min_Message_ID,RTCM3_Max_Message_ID):
             self.Dump_Levels.append(default_output_level)
@@ -226,6 +226,10 @@ class RTCM3:
             self.buffer=self.buffer[self.packet_Length + RTCM3_Min_Size:]
             self.undecoded=bytearray("")
             self.decode(self.packet_ID,packet_data)
+            if self.packet_ID in self.packet_count:
+                self.packet_count[self.packet_ID] += 1
+            else:
+                self.packet_count[self.packet_ID] = 1
             return Got_Packet
         else:
 #            print "Invalid"
