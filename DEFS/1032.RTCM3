@@ -1,0 +1,10 @@
+NAME: Physical Reference Station Position
+ID: 1032
+UINT:12:2:Message Number
+UINT:12:3:Non-Physical Reference Station ID
+UINT:12:226:Physical Reference Station ID
+UINT:6:21:ITRF Year
+INT:38:25:Physical Reference Station ARP ECEF-X
+INT:38:26:Physical Reference Station ARP ECEF-Y
+INT:38:27:Physical Reference Station ARP ECEF-Z
+END:

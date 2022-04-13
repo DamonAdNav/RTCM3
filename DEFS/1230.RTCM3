@@ -1,0 +1,12 @@
+NAME: Glonass L1 and L2 Code-Phase Biases
+ID: 1230
+UINT:12:2:Message Number
+UINT:12:3:Reference Station ID
+UINT:1:421:Glonass Code-Phase bias indicator
+UINT:3:1:Reserved
+UINT:4:422:Glonass FDMA Signals mask
+#INT:16:423:Glonass L1 C/A Code-Phase Bias
+#INT:16:424:Glonass L1 P Code-Phase Bias
+#INT:16:425:Glonass L2 C/A Code-Phase Bias
+#INT:16:426:Glonass L2 P Code-Phase Bias
+END:

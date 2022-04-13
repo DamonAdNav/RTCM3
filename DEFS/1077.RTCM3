@@ -1,0 +1,15 @@
+NAME: MSM7 GPS 
+ID: 1077
+UINT:12:2:Message Number
+UINT:12:3:Reference Station ID
+UINT:30:4:GNSS Epoch Time
+UINT:1:393:Multiple Message Bit
+UINT:3:409:IODS
+UINT:7:1:Reserved
+UINT:2:411:Clock Steering Indicator
+UINT:2:412:External Clock Indicator
+UINT:1:417:GNSS Divergence Free Smoothing Indicator
+UINT:3:418:GNSS Smoothing Interval
+UINT:64:394:GNSS Satellite Mask
+UINT:32:395:GNSS Signal Mask
+END:

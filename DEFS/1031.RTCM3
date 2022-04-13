@@ -1,0 +1,8 @@
+NAME: Glonass Network RTK Residuals
+ID: 1031
+UINT:12:2:Message Number
+UINT:17:225:Glonass Residuals Epoch Time
+UINT:12:3:Reference Station ID
+UINT:7:223:N-Refs
+UINT:5:35:Glonass Number of Satellite Signals Processed
+END:

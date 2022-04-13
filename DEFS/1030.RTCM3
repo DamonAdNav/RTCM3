@@ -1,0 +1,8 @@
+NAME: GPS Network RTK Residuals
+ID: 1030
+UINT:12:2:Message Number
+UINT:20:224:GPS Residuals Epoch Time (TOW)
+UINT:12:3:Reference Station ID
+UINT:7:223:N-Refs
+UINT:5:6:GPS Number of Satellite Signals Processed
+END:

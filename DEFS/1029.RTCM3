@@ -1,0 +1,9 @@
+NAME: Unicode String
+ID: 1029
+UINT:12:2:Message Number
+UINT:12:3:Reference Station ID
+UINT:16:51:Modified Julian Day Number
+UINT:17:52:Seconds of Day (UTC)
+REPEAT:7:138:Number of Characters to Follow
+UINT:8:139:Number of UTF-8 Code Units
+END:

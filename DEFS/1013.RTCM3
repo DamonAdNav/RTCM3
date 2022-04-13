@@ -1,0 +1,12 @@
+NAME: System Parameters
+ID: 1013
+UINT:12:2:Message Number
+UINT:12:3:Reference Station ID
+UINT:16:51:Modified Julian Day Number
+UINT:17:52:Seconds of Day (UTC)
+REPEAT:5:53:Number of Announcements to Follow
+UINT:8:54:Leap Seconds, GPS-UTC
+UINT:12:55:MessageID
+UINT:1:56:Sync Flag
+UINT:16:57:Transmission Interval
+END:
