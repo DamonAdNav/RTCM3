@@ -1,0 +1,8 @@
+NAME: Antenna Descriptor
+ID: 1007
+UINT:12:2:Message Number
+UINT:12:3:Reference Station ID
+UINT:8:29:Descriptor Counter N
+#PCHAR:0:30:Antenna Descriptor (length N bytes)
+#UINT:8:31:Antenna Setup ID
+END:
