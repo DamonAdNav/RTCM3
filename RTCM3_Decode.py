@@ -49,6 +49,7 @@ parser.add_argument("-V", "--Verbose", nargs='+', help="Packets that should be d
 parser.add_argument("-E", "--Explain", action="store_true", help="System Should Explain what is is doing, AKA Verbose")
 parser.add_argument("-W", "--Time", action="store_true", help="Report the time when the packet was received")
 parser.add_argument("-C", "--Count", action="store_true", help="Output packet count summary")
+parser.add_argument("-P", "--ProtocolVersion", action="store_true", help="Output guess of RTCM protocol version based on packet presence")
 
 args=parser.parse_args()
 
@@ -221,6 +222,11 @@ else:
       for key in sorted(rtcm3.packet_count):
          print "{} {}".format(key, rtcm3.packet_count[key])
       print
+
+   if (args.ProtocolVersion):
+      print "Guess RTCM Protocol Version: " + rtcm3.rtcm_version()
+      print
+
 
 print "Bye"
 

@@ -262,3 +262,22 @@ class RTCM3:
     def name(self):
         return str(self.packet_ID)
 
+    def rtcm_version(self):
+        # Lists of packet IDs that were added in each rev...
+        rtcm_33_message_list = set([1042, 1046] + range(1101, 1107+1))
+        rtcm_32_message_list = set([1044, 1045] + range(1111, 1117+1) + range(1121, 1127+1) + range(1071, 1230+1))
+        rtcm_31_message_list = set(range(1014,1039+1) + range(1057,1068+1) + range(4001,4095+1))
+        rtcm_30_message_list = set(range(1001, 1013+1))
+        rtcm_3x_message_list = rtcm_30_message_list | rtcm_31_message_list | rtcm_32_message_list | rtcm_33_message_list
+        packet_IDs = set(self.packet_count.keys())
+        if (packet_IDs - rtcm_3x_message_list):
+            return "Unknown Version, unknown packet IDs " + str(packet_IDs - rtcm_3x_message_list)
+        elif (packet_IDs & rtcm_33_message_list):
+            return "RTCM3.3"
+        elif (packet_IDs & rtcm_32_message_list):
+            return "RTCM3.2"
+        elif (packet_IDs & rtcm_31_message_list):
+            return "RTCM3.1"
+        else:
+            return "RTCM3.0"
+
