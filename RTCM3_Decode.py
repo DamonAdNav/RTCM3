@@ -193,12 +193,12 @@ else:
    new_data = bytearray(sys.stdin.read(1))
    while (new_data):
 
-       rtcm3.add_data (data=new_data)
+       rtcm3.add_data(data=new_data)
    #    new_data=""
        if len(rtcm3.buffer):
    #        print str(len(rtcm3.buffer))
            sys.stdout.flush()
-       result = rtcm3.process_data (dump_decoded=False)
+       result = rtcm3.process_data(dump_decoded=False)
        while result != 0 :
    #        print str(datetime.now())
            if result == Got_Undecoded :
@@ -211,7 +211,7 @@ else:
                    print "INTERNAL ERROR: Unknown result (" + str (result) + ")";
                    sys.exit();
    #        print "processing"
-           result = rtcm3.process_data ()
+           result = rtcm3.process_data()
    #        print "processed: " + str(result)
        new_data = sys.stdin.read(1)
    #    new_data = input_file.read(255)

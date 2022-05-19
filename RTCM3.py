@@ -66,9 +66,7 @@ crc24table =  (
  0xD11CCE, 0x575035, 0x5BC9C3, 0xDD8538 );
 
 
-
-# Since the packets are alway small, and we have ram we make an list that each item is a single bit. It is also a slow way to do it
-
+# Since the packets are always small, and we have ram, we make an list that each item is a single bit. It is also a slow way to do it.
 
 def makeBitArray(buffer):
     current_index=0
@@ -92,7 +90,7 @@ def bitValue(bitArray,Start,Length):
 # * Compute the CRC24 checksum using a lookup table method.
 # *
 # *********************************************************************)
-def crc_normal (Message_Buffer):
+def crc_normal(Message_Buffer):
    crc = 0
 #   print "CRC Length: " + str(len(Message_Buffer))
    for b in Message_Buffer:
@@ -176,12 +174,11 @@ class RTCM3:
                         current_bit+=8
                     field["value"]=txt
 
-
         else:
             sys.stderr.write("No Decoder for {0} length {1}\n".format(packet_ID,len(packet_data)))
 
 
-    def process_data (self, dump_decoded=False):
+    def process_data(self, dump_decoded=False):
 
         if len (self.buffer) <  RTCM3_Min_Size :
 #            print "To short"
@@ -214,7 +211,6 @@ class RTCM3:
         CRC = CRC | self.buffer[RTCM3_First_Data_Location + self.packet_Length+2];
 #        print "CRC {:X}".format(CRC)
 
-
         if CRC == Computed_CRC:
             self.packet_ID = self.buffer[RTCM3_First_Data_Location];
             self.packet_ID = self.packet_ID << 4;
@@ -245,7 +241,7 @@ class RTCM3:
 
 
 
-    def dump (self,dump_undecoded=False,dump_status=False,dump_decoded=False,dump_timestamp=False):
+    def dump(self,dump_undecoded=False,dump_status=False,dump_decoded=False,dump_timestamp=False):
         if self.Dump_Levels[self.packet_ID] :
             if dump_timestamp :
                print datetime.now()
@@ -260,12 +256,9 @@ class RTCM3:
                        print "{0}: {1}".format(field["name"],field["value"])
                 print ""
 
-
-
-
 #        self.Handlers[self.packet_ID].dump(self.Dump_Levels[self.packet_ID]);
 
 
-    def name (self):
+    def name(self):
         return str(self.packet_ID)
 
