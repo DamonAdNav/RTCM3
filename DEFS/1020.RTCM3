@@ -1,0 +1,9 @@
+NAME: Glonass Ephemeris
+ID: 1020
+UINT:12:2:Message Number
+UINT:6:38:Glonass Satellite ID
+UINT:5:40:Glonass Satellite Frequency Channel Number
+UINT:1:104:Glonass Almanac Health
+UINT:1:105:Glonass Almanac Health Availability
+# Lots more fields that are ignored here.
+END:
