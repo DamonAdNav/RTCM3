@@ -1,0 +1,35 @@
+NAME: Galileo I/NAV Ephemeris
+ID: 1046
+UINT:12:2:Message Number
+UINT:6:252:Galileo Satellite ID
+UINT:12:289:Galileo Week Number
+UINT:10:290:Galileo IODnav
+UINT:8:291:Galileo SV SIS Accuracy
+INT:14:292:Galileo ioDot
+UINT:14:293:Galileo tOC
+INT:6:294:Galileo af2
+INT:21:295:Galileo af1
+INT:31:296:Galileo af0
+INT:16:297:Galileo Crs
+INT:16:298:Galileo delta n
+INT:32:299:Galileo M0
+INT:16:300:Galileo Cuc
+UINT:32:301:Galileo Eccentricity e
+INT:16:302:Galileo Cus
+UINT:32:303:Galileo sqrtA
+UINT:14:304:Galileo toe
+INT:16:305:Galileo Cic
+INT:32:306:Galileo Omega0
+INT:16:307:Galileo Cis
+INT:32:308:Galileo i0
+INT:16:309:Galileo Crc
+INT:32:310:Galileo w Argument of Perigee
+INT:24:311:Galileo OmegaDot Rate of Right Ascension
+UINT:10:312:Galileo BGD_E5a/E1
+UINT:10:313:Galileo BGD_E5b/E1
+UINT:2:316:Galileo E5b Signal Health Status
+UINT:1:317:Galileo E5b Data Validity Status
+UINT:2:287:Galileo E1-B Signal Health Status
+UINT:1:288:Galileo E1-B Data Validity Status
+UINT:2:1:Reserved
+END:

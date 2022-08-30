@@ -1,0 +1,5 @@
+NAME: Ublox Moving Base PVT
+ID: 4072
+UINT:12:2:Message Number
+UINT:12:2:Message Sub-Type
+END:
