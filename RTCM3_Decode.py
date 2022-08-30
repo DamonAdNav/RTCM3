@@ -66,7 +66,6 @@ if args.Explain:
     print "Dump undecoded: {},  Dump Decoded: {}, Dump TimeStamp: {}".format(
         Dump_Undecoded,
         Dump_Decoded,
-        Print_ACK_NAK,
         Dump_TimeStamp)
 
 if args.None:
